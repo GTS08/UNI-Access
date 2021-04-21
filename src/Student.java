@@ -3,8 +3,10 @@ public class Student extends User {
 	private int regYear;
 	private String[] studentCourses;
 	private int bookedPC;
-	
-	public Student(int regNo, int regYear, String[] studentCourses, int bookedPC) {
+
+	public Student(String firstName, String lastName, String username, String password, int regNo, int regYear,
+			String[] studentCourses, int bookedPC) {
+		super(firstName, lastName, username, password);
 		this.setRegNo(regNo);
 		this.setRegYear(regYear);
 		this.setStudentCourses(studentCourses);
@@ -19,7 +21,7 @@ public class Student extends User {
 		this.regNo = regNo;
 	}
 
-	public String getRegYear() {
+	public int getRegYear() {
 		return regYear;
 	}
 
@@ -44,3 +46,4 @@ public class Student extends User {
 	}
 
 }
+
