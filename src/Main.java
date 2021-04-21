@@ -8,6 +8,13 @@ public class Main {
 		System.out.println("Username: " + George.getUsername());
 		System.out.println("Username: " + George.getPassword());
 
+		Student George = new User(1064973, 2017, studentCourses[7], 5 );
+
+		System.out.println("Registration Number: " + George.getRegNo());
+		System.out.println("Registration Year: " + George.getRegYear());
+		System.out.println("Student Courses: " + George.getStudentCourses());
+		System.out.println("Number of PC thats booked: " + George.getBookedPC());
+
 	}
 
 }
