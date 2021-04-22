@@ -1,7 +1,9 @@
 public class Main {
 
 	public static void main(String[] args) {
+
 		User GeorgeUser = new User("George", "Thomas", "gthomas", "gthomas1999"); // User Object
+
 
 		System.out.println("Username: " + GeorgeUser.getFirstName());
 		System.out.println("Username: " + GeorgeUser.getLastName());
@@ -23,6 +25,24 @@ public class Main {
 		}
 		System.out.print("\n");
 		System.out.println("Number of PC thats booked: " + GeorgeStudent.getBookedPC());
+
+		/* NOT FUNCTIONAL YET
+		
+		// Event of the university
+		Event RandomEvent = new Event("5","NYCEID420","300","startDate"."endDate","BA");
+		
+		// Instantiate a Date object
+	    Date startDate = new Date();
+	    Date endDate = new Date();
+
+	    // display time and date using toString()
+	    System.out.print("\n");
+	    System.out.println("Start date of an event: " + RandomEvent.startDate.toString());
+	    System.out.println("End date of an event: " + RandomEvent.endDate.toString());
+	    
+	    */ 
+	   }
+
 		
 		CompAdmin LeoCompAdmin = new CompAdmin("Leonidas", "Tsantarliotis", "ltsantarliotis", "ltsantarliotis1999"); // Computer Admin Object
 		
@@ -49,6 +69,4 @@ public class Main {
 		
 
 	}
-
-}
 
