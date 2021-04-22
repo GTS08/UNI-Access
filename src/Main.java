@@ -2,10 +2,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		User GeorgeUser = new User("George", "Thomas", "gthomas", "gthomas1999");
-		
-		
-
 		User GeorgeUser = new User("George", "Thomas", "gthomas", "gthomas1999"); // User Object
 
 
