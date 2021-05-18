@@ -5,9 +5,8 @@ public class Exam extends Event {
 	private int timeout;
 
 	Exam(String courseCode, Date startDate, Date endDate, Student[] participants, Teacher createdBy, Room room,
-			Student[] absentLog, int timeout) {
-		super(courseCode, startDate, endDate, participants, createdBy, room);
-		this.setAbsentLog(absentLog);
+			Course course, Student[] absentLog, int timeout) {
+		super(courseCode, startDate, endDate, participants, createdBy, room, course);
 		this.setTimeout(timeout);
 	}
 
@@ -26,4 +25,5 @@ public class Exam extends Event {
 	public void setTimeout(int timeout) {
 		this.timeout = timeout;
 	}
+
 }
