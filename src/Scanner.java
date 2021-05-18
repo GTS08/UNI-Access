@@ -14,13 +14,13 @@ public class Scanner extends Room {
 	public String getScannerCode() {
 		return scannerCode;
 	}
-	public String setScannerCode(String scannerCode) {
+	public void setScannerCode(String scannerCode) {
 		this.scannerCode = scannerCode;
 	}
 	public String getMode() {
 		return mode;
 	}
-	public String setMode(String mode) {
+	public void setMode(String mode) {
 		this.mode = mode;
 	}
 	public Room getRoom() {
