@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class Student extends User {
 	// private attributes of Student
 	private int regNo;
 	private int regYear;
-	private String[] studentCourses;
+	private static String[] studentCourses;
 	private int bookedPC;
 	
 	// constructor and super
@@ -47,5 +49,22 @@ public class Student extends User {
 		this.bookedPC = bookedPC;
 	}
 
-}
 
+// Method that checks if the Student is a signed to a course
+public boolean isParticipant(String[] studentCourses,String title){
+  if(Arrays.asList(studentCourses).contains(title)){
+    return true;
+  }else{
+    return false;
+  }
+}
+// Main that test the method isParticipant and should return true
+ public static void main(String[] args) {
+		 Student kostas = new Student("Kostas", "Tepetes", "ktepetes", "ktepetes1999", 1064973, 2017, studentCourses,
+					5);
+		 String[] studentCourses = {"Math","Logic Design","Software Development","Java Programming","Web"};
+		 String title = "Software Development";
+		 title = studentCourses[2];
+		 kostas.isParticipant(studentCourses,"Software Development");
+	    }
+}
