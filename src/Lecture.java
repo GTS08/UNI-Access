@@ -4,9 +4,8 @@ public class Lecture extends Event {
 	private int currentViewers;
 
 	Lecture(String courseCode, Date startDate, Date endDate, Student[] participants, Teacher createdBy, Room room,
-			int currentViewers) {
-		super(courseCode, startDate, endDate, participants, createdBy, room);
-		this.setCurrentViewers(currentViewers);
+			Course course, int currentViewers) {
+		super(courseCode, startDate, endDate, participants, createdBy, room, course);
 	}
 
 	public int getCurrentViewers() {

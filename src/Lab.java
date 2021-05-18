@@ -5,9 +5,8 @@ public class Lab extends Event {
 	private int timeout;
 
 	Lab(String courseCode, Date startDate, Date endDate, Student[] participants, Teacher createdBy, Room room,
-			Student[] absentLog, int timeout) {
-		super(courseCode, startDate, endDate, participants, createdBy, room);
-		this.setAbsentLog(absentLog);
+			Course course, Student[] absentLog, int timeout) {
+		super(courseCode, startDate, endDate, participants, createdBy, room, course);
 		this.setTimeout(timeout);
 	}
 
