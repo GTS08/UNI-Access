@@ -36,5 +36,27 @@ public class Computer {
 	public void setBookedBy(Student bookedBy) {
 		this.bookedBy = bookedBy;
 	}
-	
+//method that displays the current state of a PC in the Computer Center	
+ public void displayPCStatus(boolean status,int id){
+   if (status == true){
+     System.out.println("The Computer with the id: " + id + " is available");
+   }else{
+     System.out.println("The Computer with the id: " + id + " is not available");
+   }
+ }
+//method that impliments the process of booking a PC
+ public void bookPC(boolean status){
+   if(status == false){
+    status = true;
+    System.out.println("The Computer is now booked");
+   }else{
+     System.out.println("The Computer cannot be booked right now");
+   }
+   
+}
+ public static void main(String[] args) {
+		 Computer bookingProcess = new Computer();
+		 bookingProcess.displayPCStatus(false,23);
+         bookingProcess.bookPC(false);
+	    }
 }
