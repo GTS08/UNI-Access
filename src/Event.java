@@ -114,5 +114,19 @@ public class Event {
 		return attendedArray;
 
 	}
+	 public void findCourseLog(String courseCode,Date startDate,Date endDate,Room room ){
+		    System.out.println(courseCode.toString());
+		    System.out.println(startDate.toString());
+		    System.out.println(endDate.toString());
+		    System.out.println(room.toString());
+
+		    ArrayList<String> courseLog = new ArrayList<String>();
+		    courseLog.add(courseCode.toString());
+		    courseLog.add(startDate.toString());
+		    courseLog.add(endDate.toString());
+		    courseLog.add(room.toString());
+
+		    System.out.println("Course Log: " +courseLog);
+		  }
 
 }
