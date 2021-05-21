@@ -4,13 +4,17 @@ public class CompCenter {
 	private int available;
 	private String[] openHours;
 	private int totalSeats;
+	private Department dep;
+	private CompAdmin admin;
 
-	public CompCenter(String status, int occupied, int available, String[] openHours, int totalSeats) {
+	public CompCenter(String status, int occupied, int available, String[] openHours, int totalSeats, Department dep, CompAdmin admin) {
 		this.setStatus(status);
 		this.setOccupied(occupied);
 		this.setAvailable(available);
 		this.setOpenHours(openHours);
 		this.setTotalSeats(totalSeats);
+		this.setDep(dep);
+		this.setAdmin(admin);
 	}
 
 	public String getStatus() {
@@ -52,5 +56,20 @@ public class CompCenter {
 	public void setTotalSeats(int totalSeats) {
 		this.totalSeats = totalSeats;
 	}
+	
+	public Department getDep() {
+		return dep;
+	}
 
+	public void setDep(Department dep) {
+		this.dep = dep;
+	}
+	
+	public CompAdmin getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(CompAdmin admin) {
+		this.admin = admin;
+	}
 }

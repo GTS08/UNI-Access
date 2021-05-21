@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
-import java.time.LocalDateTime;
 
 public class Event {
 	private String courseCode;
@@ -141,13 +140,13 @@ public class Event {
 		    System.out.println(courseCode.toString());
 		    System.out.println(startDate.toString());
 		    System.out.println(endDate.toString());
-		    System.out.println(room.toString());
+		    System.out.println(room.getTitle());
 
 		    ArrayList<String> courseLog = new ArrayList<String>();
 		    courseLog.add(courseCode.toString());
 		    courseLog.add(startDate.toString());
 		    courseLog.add(endDate.toString());
-		    courseLog.add(room.toString());
+		    courseLog.add(room.getTitle());
 
 		    System.out.println("Course Log: " +courseLog);
 		  }

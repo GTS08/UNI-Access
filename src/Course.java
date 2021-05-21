@@ -5,14 +5,16 @@ public class Course {
 	private int year;
 	private boolean isMandatory;
 	private boolean hasLab;
+	private Department dep;
 
-	Course(String code, String title, int semester, int year, boolean isMandatory, boolean hasLab) {
+	Course(String code, String title, int semester, int year, boolean isMandatory, boolean hasLab, Department dep) {
 		this.setCode(code);
 		this.setTitle(title);
 		this.setSemester(semester);
 		this.setYear(year);
 		this.setMandatory(isMandatory);
 		this.setHasLab(hasLab);
+		this.setDep(dep);
 	}
 
 	public String getCode() {
@@ -63,4 +65,12 @@ public class Course {
 		this.hasLab = hasLab;
 	}
 
+	public Department getDep() {
+		return dep;
+	}
+
+	public void setDep(Department dep) {
+		this.dep = dep;
+	}
+	
 }

@@ -2,10 +2,14 @@ public class Room {
 	
 	private int capacity;
 	private boolean isLab;
+	private Department dep;
+	private String title;
 	
-	public Room(int capacity, boolean isLab) {
+	public Room(int capacity, boolean isLab, Department dep, String title) {
 		this.setCapacity(capacity);
 		this.setIsLab(isLab);
+		this.setDep(dep);
+		this.setTitle(title);
 	}
 	
 	public int getCapacity() {
@@ -22,5 +26,21 @@ public class Room {
 	
 	public void setIsLab(boolean isLab) {
 		this.isLab = isLab;
+	}	
+	
+	public Department getDep() {
+		return dep;
+	}
+
+	public void setDep(Department dep) {
+		this.dep = dep;
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
 	}
 }
