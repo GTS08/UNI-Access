@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
-import java.time.LocalDateTime;
 
 public class Event {
 	private String courseCode;
