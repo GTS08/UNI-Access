@@ -59,12 +59,12 @@ public boolean isParticipant(String[] studentCourses,String title){
   }
 }
 // Main that test the method isParticipant and should return true
- public static void main(String[] args) {
-		 Student kostas = new Student("Kostas", "Tepetes", "ktepetes", "ktepetes1999", 1064973, 2017, studentCourses,
-					5);
-		 String[] studentCourses = {"Math","Logic Design","Software Development","Java Programming","Web"};
-		 String title = "Software Development";
-		 title = studentCourses[2];
-		 kostas.isParticipant(studentCourses,"Software Development");
-	    }
+// public static void main(String[] args) {
+//		 Student kostas = new Student("Kostas", "Tepetes", "ktepetes", "ktepetes1999", 1064973, 2017, studentCourses,
+//					5);
+//		 String[] studentCourses = {"Math","Logic Design","Software Development","Java Programming","Web"};
+//		 String title = "Software Development";
+//		 title = studentCourses[2];
+//		 kostas.isParticipant(studentCourses,"Software Development");
+//	    }
 }
