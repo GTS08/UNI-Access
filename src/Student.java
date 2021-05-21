@@ -9,8 +9,8 @@ public class Student extends User {
 	
 	// constructor and super
 	public Student(String firstName, String lastName, String username, String password, int regNo, int regYear,
-			String[] studentCourses, int bookedPC) {
-		super(firstName, lastName, username, password);
+			String[] studentCourses, int bookedPC, Department dep) {
+		super(firstName, lastName, username, password, dep);
 		this.setRegNo(regNo);
 		this.setRegYear(regYear);
 		this.setStudentCourses(studentCourses);

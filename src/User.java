@@ -3,12 +3,14 @@ public class User {
 	private String lastName;
 	private String username;
 	private String password;
+	private Department dep;
 
-	public User(String firstName, String lastName, String username, String password) {
+	public User(String firstName, String lastName, String username, String password, Department dep) {
 		this.setFirstName(firstName);
 		this.setLastName(lastName);
 		this.setUsername(username);
 		this.setPassword(password);
+		this.setDep(dep);
 	}
 
 	public String getFirstName() {
@@ -43,4 +45,12 @@ public class User {
 		this.password = password;
 	}
 
+	public Department getDep() {
+		return dep;
+	}
+
+	public void setDep(Department dep) {
+		this.dep = dep;
+	}
+	
 }
