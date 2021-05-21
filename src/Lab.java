@@ -2,12 +2,10 @@ import java.time.LocalDateTime;
 
 public class Lab extends Event {
 	private Student[] absentLog;
-	private int timeout;
 
 	Lab(String courseCode, LocalDateTime startDate, LocalDateTime endDate, Student[] participants, Teacher createdBy, Room room,
-			Course course, Student[] absentLog, int timeout) {
-		super(courseCode, startDate, endDate, participants, createdBy, room, course);
-		this.setTimeout(timeout);
+			Course course, Student[] absentLog, long timeout) {
+		super(courseCode, startDate, endDate, participants, createdBy, room, course, timeout);
 	}
 
 	public Student[] getAbsentLog() {
@@ -16,13 +14,5 @@ public class Lab extends Event {
 
 	public void setAbsentLog(Student[] absentLog) {
 		this.absentLog = absentLog;
-	}
-
-	public int getTimeout() {
-		return timeout;
-	}
-
-	public void setTimeout(int timeout) {
-		this.timeout = timeout;
 	}
 }
