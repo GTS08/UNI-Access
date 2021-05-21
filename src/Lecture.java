@@ -1,9 +1,9 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Lecture extends Event {
 	private int currentViewers;
 
-	Lecture(String courseCode, Date startDate, Date endDate, Student[] participants, Teacher createdBy, Room room,
+	Lecture(String courseCode, LocalDateTime startDate, LocalDateTime endDate, Student[] participants, Teacher createdBy, Room room,
 			Course course, int currentViewers) {
 		super(courseCode, startDate, endDate, participants, createdBy, room, course);
 	}
