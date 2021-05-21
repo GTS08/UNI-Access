@@ -57,7 +57,16 @@ public class Scanner {
 			break;
 		case 6:
 			System.out.println("You're not expected!");
-			break;		
+			break;	
+		case 7:
+			System.out.println("You're on time!");
+			break;
+		case 8:
+			System.out.println("You're late!");
+			break;	
+		case 9:
+			System.out.println("You're early!");
+			break;
 		default:
 			System.out.println("Something went wrong!");
 		}
@@ -91,5 +100,23 @@ public class Scanner {
 		}
 		showMessage(6);
 		return false;
+	}
+	
+	public boolean isLateStudent(Event event) {
+		LocalDateTime now = LocalDateTime.now();
+		LocalDateTime startDate = event.getStartDate();
+		long timeout = event.getTimeout();
+		if (now.isAfter(startDate.minusMinutes(15)) && now.isBefore(startDate.plusMinutes(timeout))){
+			showMessage(7);
+			return false;
+		}
+		else if (now.isAfter(startDate.plusMinutes(timeout))) {
+			showMessage(8);
+			return true;
+		}
+		else {
+			showMessage(9);
+			return false;
+		}		
 	}
 }

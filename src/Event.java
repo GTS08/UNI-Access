@@ -12,7 +12,9 @@ public class Event {
 	private Teacher createdBy;
 	private Room room;
 	private Course course;
+	private long timeout;
 
+	// Constructor for Lecture
 	public Event(String courseCode, LocalDateTime startDate, LocalDateTime endDate, Student[] participants, Teacher createdBy, Room room,
 			Course course) {
 		this.setCourseCode(courseCode);
@@ -20,7 +22,19 @@ public class Event {
 		this.setEndDate(endDate);
 		this.setParticipants(participants);
 		this.setCreatedBy(createdBy);
+		this.setRoom(room);		
+	}
+	
+	// Constructor for Lab, Exam
+	public Event(String courseCode, LocalDateTime startDate, LocalDateTime endDate, Student[] participants, Teacher createdBy, Room room,
+			Course course, long timeout) {
+		this.setCourseCode(courseCode);
+		this.setStartDate(startDate);
+		this.setEndDate(endDate);
+		this.setParticipants(participants);
+		this.setCreatedBy(createdBy);
 		this.setRoom(room);
+		this.setTimeout(timeout);
 	}
 
 	public String getCourseCode() {
@@ -79,6 +93,14 @@ public class Event {
 		this.course = course;
 	}
 
+	public void setTimeout(long timeout) {
+		this.timeout = timeout;
+	}
+	
+	public long getTimeout() {
+		return timeout;
+	}
+	
 	private boolean isOnProgress(Student student) {
 		Random rand = new Random();
 		int randonNum = rand.nextInt(100);
