@@ -5,7 +5,7 @@ public class Room {
 	private Department dep;
 	private String title;
 	
-	public Room(int capacity, boolean isLab) {
+	public Room(int capacity, boolean isLab, Department dep, String title) {
 		this.setCapacity(capacity);
 		this.setIsLab(isLab);
 		this.setDep(dep);
