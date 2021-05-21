@@ -1,10 +1,10 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Exam extends Event {
 	private Student[] absentLog;
 	private int timeout;
 
-	Exam(String courseCode, Date startDate, Date endDate, Student[] participants, Teacher createdBy, Room room,
+	Exam(String courseCode, LocalDateTime startDate, LocalDateTime endDate, Student[] participants, Teacher createdBy, Room room,
 			Course course, Student[] absentLog, int timeout) {
 		super(courseCode, startDate, endDate, participants, createdBy, room, course);
 		this.setTimeout(timeout);

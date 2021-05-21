@@ -1,18 +1,19 @@
 import java.util.ArrayList;
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Random;
+import java.time.LocalDateTime;
 
 public class Event {
 	private String courseCode;
-	private Date startDate;
-	private Date endDate;
+	private LocalDateTime startDate;
+	private LocalDateTime endDate;
 	private Student[] participants;
 	private Teacher createdBy;
 	private Room room;
 	private Course course;
 
-	public Event(String courseCode, Date startDate, Date endDate, Student[] participants, Teacher createdBy, Room room,
+	public Event(String courseCode, LocalDateTime startDate, LocalDateTime endDate, Student[] participants, Teacher createdBy, Room room,
 			Course course) {
 		this.setCourseCode(courseCode);
 		this.setStartDate(startDate);
@@ -30,19 +31,19 @@ public class Event {
 		this.courseCode = courseCode;
 	}
 
-	public Date getStartDate() {
+	public LocalDateTime getStartDate() {
 		return startDate;
 	}
 
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDateTime startDate) {
 		this.startDate = startDate;
 	}
 
-	public Date getEndDate() {
+	public LocalDateTime getEndDate() {
 		return endDate;
 	}
 
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocalDateTime endDate) {
 		this.endDate = endDate;
 	}
 
@@ -114,7 +115,7 @@ public class Event {
 		return attendedArray;
 
 	}
-	 public void findCourseLog(String courseCode,Date startDate,Date endDate,Room room ){
+	 public void findCourseLog(String courseCode,LocalDateTime startDate,LocalDateTime endDate,Room room ){
 		    System.out.println(courseCode.toString());
 		    System.out.println(startDate.toString());
 		    System.out.println(endDate.toString());

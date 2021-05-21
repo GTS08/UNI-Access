@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.time.LocalDateTime;
 
 public class Scanner {
 	private String scannerCode;
@@ -51,6 +52,12 @@ public class Scanner {
 		case 4:
 			System.out.println("Validation failed!");
 			break;
+		case 5:
+			System.out.println("You're expected!");
+			break;
+		case 6:
+			System.out.println("You're not expected!");
+			break;		
 		default:
 			System.out.println("Something went wrong!");
 		}
@@ -71,5 +78,18 @@ public class Scanner {
 			showMessage(4);
 			return false;
 		}
+	}
+	
+	public boolean isExpectedStudent(Student student, Event event) {
+		Student[] participants = event.getParticipants();
+		
+		for (int i = 0; i < participants.length; i++) {
+			if (student.getRegNo() == participants[i].getRegNo()) {
+				showMessage(5);
+				return true;
+			}
+		}
+		showMessage(6);
+		return false;
 	}
 }
