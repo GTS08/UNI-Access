@@ -20,12 +20,10 @@ public class Main {
 		Scanner testScanner = new Scanner();
 		LocalDateTime startDate = LocalDateTime.of(2021, Month.MAY, 21, 16, 44, 0); // 2021, May, 21, 16:45:00
 		LocalDateTime endDate = LocalDateTime.of(2021, Month.MAY, 21, 18, 0, 0); // 2021, May, 21, 18:00:00
-		LocalDateTime startDate2 = LocalDateTime.of(2021, Month.MAY, 21, 15, 0, 0);
-		LocalDateTime endDate2 = LocalDateTime.of(2021, Month.MAY, 21, 17, 0, 0);
+		LocalDateTime startDate2 = LocalDateTime.of(2021, Month.MAY, 21, 18, 0, 0);
+		LocalDateTime endDate2 = LocalDateTime.of(2021, Month.MAY, 21, 19, 0, 0);
 		LocalDateTime startDate3 = LocalDateTime.of(2021, Month.MAY, 20, 9, 0, 0);
 		LocalDateTime endDate3 = LocalDateTime.of(2021, Month.MAY, 20, 11, 0, 0);
-		LocalDateTime startDate4 = LocalDateTime.of(2021, Month.MAY, 21, 9, 0, 0);
-		LocalDateTime endDate4 = LocalDateTime.of(2021, Month.MAY, 21, 11, 0, 0);
 		Student[] participants = { testStudent1, testStudent2 };
 		Teacher testTeacher = new Teacher("Nikos", "Nikolopoulos", "nnikolopoulos", "123456789", testCourses, ceid);
 		Room testRoom = new Room(20, true, ceid, "B4");
@@ -50,10 +48,14 @@ public class Main {
 		Event Lesson2 = new Event("2", startDate2, endDate2, testAbsentLog, testTeacher, testRoom, testCourse);
 		Event Lesson3 = new Event("3", startDate3, endDate3, testAbsentLog, testTeacher, testRoom, testCourse);
 		Event[] events = { Lesson1, Lesson2, Lesson3 };
-		System.out.println("Hours occupied: " + Lesson1.roomHoursOccupied(testRoom, "FRIDAY", events));
+		System.out.println("Hours occupied on Friday: " + Lesson1.roomHoursOccupied(testRoom, "FRIDAY", events));
 
-		Lesson1.reserveRoom(testRoom, startDate4, endDate4);
-		System.out.println("Hours occupied: " + Lesson1.hoursOccupiedFriday);
+		Lesson3.reserveRoom(testRoom, startDate3, endDate3);
+		System.out.println("Hours occupied on Thursday: " + Lesson3.hoursOccupiedThursday);
+		System.out.println("Rooms occupied by " + testTeacher.getFirstName() + " on Friday: "
+				+ testRoom.getTeacherRooms(testTeacher, "FRIDAY", events));
+		testRoom.deleteReservedRoom(testRoom, startDate, endDate, events);
+		System.out.println("Hours occupied on Friday after deleteReservedRoom(): " + Lesson1.hoursOccupiedFriday);
 		// ==============================================================================================================>
 	}
 
