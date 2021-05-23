@@ -3,12 +3,12 @@ import java.time.LocalDateTime;
 
 public class Scanner {
 	private String scannerCode;
-	private String mode;
+	private mode mode;
 	private Room room;
 	
 	public Scanner() {}
 
-	public Scanner(String scannerCode, String mode, Room room) {
+	public Scanner(String scannerCode, mode mode, Room room) {
 		this.setScannerCode(scannerCode);
 		this.setMode(mode);
 		this.setRoom(room);
@@ -22,11 +22,11 @@ public class Scanner {
 		this.scannerCode = scannerCode;
 	}
 
-	public String getMode() {
+	public mode getMode() {
 		return mode;
 	}
 
-	public void setMode(String mode) {
+	public void setMode(mode mode) {
 		this.mode = mode;
 	}
 
