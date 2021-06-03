@@ -5,9 +5,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// Test the classes
-
-		// test christos methods
 		// ==============================================================================================================
 		// dummy data
 		String[] testCourses = { "Software Engineering", "Advanced Microprocessors" };
@@ -34,25 +31,24 @@ public class Main {
 
 		// validation is random, expected students are testStudent1 and 2
 		if (testScanner.isValidStudent(testStudent3) && testScanner.isExpectedStudent(testStudent3, testEvent)) { // validation
-																						// is
-																													// random
+			// is
+			// random
 			testScanner.isLateStudent(testEvent);
 		}
 
 		testEvent.findCourseLog("CEID1234", startDate, endDate, testRoom);
-		
+
 		CompCenter testCenter = new CompCenter();
-		CompAdmin testAdmin = new CompAdmin("Joh","Doe","jdoe","123456789",ceid);
+		CompAdmin testAdmin = new CompAdmin("Joh", "Doe", "jdoe", "123456789", ceid);
 		testCenter.setStatus(status.ONLINE);
 		testCenter.setDep(ceid);
 		testCenter.setAdmin(testAdmin);
-		
+
 		if (testAdmin.isValidStatus(status.OFFLINE, testCenter)) {
 			testAdmin.updateStatus(status.OFFLINE, testScanner, testCenter);
 		}
 		// ==============================================================================================================
 
-		// test leo's methods
 		// <==============================================================================================================
 		Event Lesson1 = new Event("1", startDate, endDate, testAbsentLog, testTeacher, testRoom, testCourse);
 		Event Lesson2 = new Event("2", startDate2, endDate2, testAbsentLog, testTeacher, testRoom, testCourse);

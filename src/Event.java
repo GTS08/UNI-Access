@@ -100,7 +100,7 @@ public class Event {
 		return timeout;
 	}
 
-	private boolean isOnProgress(Student student) {
+	public boolean isOnProgress(Student student) {
 		Random rand = new Random();
 		int randonNum = rand.nextInt(100);
 
@@ -110,7 +110,7 @@ public class Event {
 		return false;
 	}
 
-	private boolean isPresent(Student student) {
+	public boolean isPresent(Student student) {
 		Random rand = new Random();
 		int randonNum = rand.nextInt(100);
 

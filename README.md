@@ -12,7 +12,7 @@
 
 Το project έχει υλοποιηθεί σύμφωνα με το παρακάτω διάγραμμα.
 
-![domain_model](domain_model.png)
+![class-diagram](class-diagram.png)
 
 ## Εργαλεία
 - Java
