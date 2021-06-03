@@ -1,5 +1,5 @@
 public class CompCenter {
-	private String status;
+	private status status;
 	private int occupied;
 	private int available;
 	private String[] openHours;
@@ -7,7 +7,9 @@ public class CompCenter {
 	private Department dep;
 	private CompAdmin admin;
 
-	public CompCenter(String status, int occupied, int available, String[] openHours, int totalSeats, Department dep, CompAdmin admin) {
+	public CompCenter() {}
+	
+	public CompCenter(status status, int occupied, int available, String[] openHours, int totalSeats, Department dep, CompAdmin admin) {
 		this.setStatus(status);
 		this.setOccupied(occupied);
 		this.setAvailable(available);
@@ -17,11 +19,11 @@ public class CompCenter {
 		this.setAdmin(admin);
 	}
 
-	public String getStatus() {
+	public status getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(status status) {
 		this.status = status;
 	}
 
