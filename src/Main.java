@@ -5,6 +5,8 @@ public class Main {
 
 	public static void main(String[] args) {
 
+		// Test functionality of the system
+
 		// ==============================================================================================================
 		// dummy data
 		String[] testCourses = { "Software Engineering", "Advanced Microprocessors" };
